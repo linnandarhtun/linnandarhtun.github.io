@@ -33,12 +33,15 @@
             // || OR
             // ! NOT
            
-            if ( c > 80 || java > 80 || js > 80) {
-                document.write("<h1>This student is honored!</h1>");
-            }else {
-                document.write("<h1>This student is unhonored!</h1>");
-            }
-        }    
+            
+             if ( c > 80 || java > 80 || js > 80 ){
+                 document.write("<h1>This student is honored!")
+             }else if ( c >= 50 && java >= 50 && js >=50){
+                 document.write("<h1>This student is passed!")
+                 }else{
+                 document.write("<h1>This student is failed! ")
+             }
+        }  
                 
     </script>
 </body>
