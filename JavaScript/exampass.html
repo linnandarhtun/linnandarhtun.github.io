@@ -33,15 +33,51 @@
             // || OR
             // ! NOT
            
-            
-             if ( c > 80 || java > 80 || js > 80 ){
-                 document.write("<h1>This student is honored!")
-             }else if ( c >= 50 && java >= 50 && js >=50){
-                 document.write("<h1>This student is passed!")
-                 }else{
-                 document.write("<h1>This student is failed! ")
-             }
-        }  
+ 
+           if (c >=50 && java >=50 && js >=50){
+               if (c >80 && java > 80 && js > 80){
+                   document.write(`<h1>Great,you pass this exam with Distinction!</h1>`);
+                   document.write(`<h3>You got Distinction in TurboC with ^${c}^ marks.</h3>`);
+                   document.write(`<h3>You got Distinction in Java with ^${java}^ marks.</h3>` );
+                   document.write(`<h3>You got Distinction in JS with ^${js} marks.</h3>`);  
+                }else if (c>80 || java>80 || js>80 ){
+                    if (c>80){
+                      document.write(`<h2>Wow! You got Distinction in TurboC with ^${c}^ marks and pass this exam!</h2>`);
+                    }
+                    if (java>80){
+                      document.write(`<h2>Wow! You got Distinction in Java with ^${java}^ marks and pass this exam!.</h2>`);    
+                    }
+                    if (js>80){
+                       document.write(`<h2>Wow! You got Distinction in JS with ^${js}^ marks and pass this exam!.</h2>`);
+                    }
+                }else {
+                  document.write(`<h1>Great!!You Pass this exam.</h1>`);
+                  document.write(`<h3>You Pass TurboC with ^${c}^ marks!!</h3>`);
+                  document.write(`<h3>You Pass Java with ^${java}^ marks!!</h3>`);
+                  document.write(`<h3>You Pass js with ^${js}^ marks!!</h3>`);
+
+                }
+            }else {
+                      if ( c<50 && java<50 && js<50) {
+                     document.write(`<h3>Oops!unfortunately,you fail this exam! Don't be depressed and try again!</h3>`);
+                     document.write(`<h3>Oops!unfortunately,you fail TurboC with ^${c}^ marks!</h3>`);
+                     document.write(`<h3>Oops!unfortunately,you fail Java with ^${java}^ marks!</h3>`);
+                     document.write(`<h3>Oops!unfortunately,you fail JS with ^${js}^ marks!</h3>`);
+
+                    }else {
+                      if (c < 50){
+                           document.write(`<h3>Oops!unfortunately,you fail this exam as you just got ^${c}^ marks in TurboC! Don't be depreessed and try again!</h3>`);
+                        }
+                      if (java < 50){
+                           document.write(`<h3>Oops!unfortunately,you fail this exam as you just got  ^${java}^ marks in Java! Don't be depreessed and try again!</h3>`);
+                        }
+                      if(js < 50){
+                         document.write(`<h3>Oops!unfortunately,you fail this exam as you just got ^${js}^ marks in JS! Don't be depreessed and try again!</h3>`);
+                        }
+                    }
+                }
+        }
+          
                 
     </script>
 </body>
